@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mx-auto w-[800px] h-[400px] mt-[40px] border-2 rounded-lg border-black flex justify-between items-center">
+      <div class="flex flex-col justify-between p-4 w-[50%] border-r-2 border-black h-full">
+          <div>
+              <h2 class="text-xl font-bold">Player-1</h2>
+              <h3 class="text-lg font-semibold">Score: <span id="score1">0</span></h3>
+              <div class="flex justify-center items-center w-[20%] h-full">
+                  <h1 id="randomNumber1" class="text-6xl font-bold">0</h1>
+              </div>
+          </div>
+          <button
+              id="btn1"
+              class="bg-[#A4D9FF] border-[2px] border-black rounded-2xl text-black font-bold py-2 px-4 rounded mb-4"
+          >
+              Click
+          </button>
+      </div>
+
+      <div class="flex flex-col justify-between p-4 w-[50%] h-full">
+          <div>
+              <h2 class="text-xl font-bold">Player-2</h2>
+              <h3 class="text-lg font-semibold">Score: <span id="score2">0</span></h3>
+              <div class="flex justify-center items-center w-[20%] h-full">
+                  <h1 id="randomNumber2" class="text-6xl font-bold">0</h1>
+              </div>
+          </div>
+          <button
+              id="btn2"
+              class="bg-[#E8ECEF] rounded-2xl border-[2px] border-black text-black font-bold py-2 px-4 rounded mb-4"
+              disabled
+          >
+              Click
+          </button>
+      </div>
+  </div>
+
+
+  <div id="modal" class="hidden ">
+    <div class="bg-[yellow] p-8 rounded-lg shadow-lg flex justify-center flex-col">
+      <h2 id="winnerMessage" class="text-2xl font-bold mb-4"></h2>
+      <button id="restartButton" class="bg-blue-500 text-white py-2 px-4 rounded">Restart</button>
+    </div>
+  </div>
+  
+  <script src="js/index.js"></script>
+</body>
+</html>
