@@ -17,10 +17,10 @@ function getRandomNumber(): number {
 }
 
 function checkWinner(): void {
-    if (score1 >= 10) {
+    if (score1 >= 100) {
         winner.textContent = "Player 1 win 🥳"; 
         modal.classList.remove("hidden");
-    } else if (score2 >= 10) {
+    } else if (score2 >= 100) {
         winner.textContent = "Player 2 win 🥳"; 
         modal.classList.remove("hidden");
     }
