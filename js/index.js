@@ -7,7 +7,7 @@ const score1Element = document.getElementById("score1");
 const score2Element = document.getElementById("score2");
 const modal = document.getElementById("modal");
 const winner = document.getElementById("winner");
-const restartBtn = document.getElementById("restartBtn");
+const restartButton = document.getElementById("restartButton");
 let currentPlayer = 1;
 let score1 = 0;
 let score2 = 0;
@@ -15,11 +15,11 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 9) + 1;
 }
 function checkWinner() {
-    if (score1 >= 100) {
+    if (score1 >= 10) {
         winner.textContent = "Player 1 win 🥳";
         modal.classList.remove("hidden");
     }
-    else if (score2 >= 100) {
+    else if (score2 >= 10) {
         winner.textContent = "Player 2 win 🥳";
         modal.classList.remove("hidden");
     }
@@ -48,7 +48,7 @@ btn2.addEventListener("click", function () {
         checkWinner();
     }
 });
-restartBtn.addEventListener("click", function () {
+restartButton.addEventListener("click", function () {
     score1 = 0;
     score2 = 0;
     score1Element.textContent = score1.toString();

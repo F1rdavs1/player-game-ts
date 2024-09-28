@@ -5,8 +5,8 @@ const randomNumber2: HTMLElement = document.getElementById("randomNumber2") as H
 const score1Element: HTMLElement = document.getElementById("score1") as HTMLElement;
 const score2Element: HTMLElement = document.getElementById("score2") as HTMLElement;
 const modal: HTMLElement = document.getElementById("modal") as HTMLElement;
-const winner: HTMLElement = document.getElementById("winner") as HTMLElement;
-const restartBtn: HTMLElement = document.getElementById("restartBtn") as HTMLElement;
+const winner: HTMLElement = document.getElementById("winner") as HTMLElement; 
+const restartButton: HTMLElement = document.getElementById("restartButton") as HTMLElement; 
 
 let currentPlayer: number = 1;
 let score1: number = 0;
@@ -16,12 +16,12 @@ function getRandomNumber(): number {
     return Math.floor(Math.random() * 9) + 1; 
 }
 
-function checkWinner():void {
-    if (score1 >= 100) {
-        winner.textContent = "Player 1 win 🥳";
+function checkWinner(): void {
+    if (score1 >= 10) {
+        winner.textContent = "Player 1 win 🥳"; 
         modal.classList.remove("hidden");
-    } else if (score2 >= 100) {
-        winner.textContent = "Player 2 win 🥳";
+    } else if (score2 >= 10) {
+        winner.textContent = "Player 2 win 🥳"; 
         modal.classList.remove("hidden");
     }
 }
@@ -52,7 +52,7 @@ btn2.addEventListener("click", function () {
     }
 });
 
-restartBtn.addEventListener("click", function () {
+restartButton.addEventListener("click", function () { 
     score1 = 0;
     score2 = 0;
     score1Element.textContent = score1.toString();
